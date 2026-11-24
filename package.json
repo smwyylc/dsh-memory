@@ -1,0 +1,28 @@
+{
+  "name": "dsh-memory",
+  "version": "1.5.0",
+  "description": "DSH 长期记忆插件（bundle 形态）：全局 $DSH_HOME/agent.md + 工作区 .agent/memory.md 注入、memory_read / memory_write 模型工具、会话开始时自动检查/创建工作区记忆文件、设置面板「记忆」查看与编辑 agent.md。",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT"
+}

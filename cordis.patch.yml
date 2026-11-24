@@ -1,0 +1,12 @@
+# bundle patch for the dsh-memory plugin: inserts its plugin row into the web
+# profile roster. Applied as a profile bundle layer (the `dsh.bundle.patch`
+# manifest field), so the profile's own cordis.patch.yml no longer has to
+# mention this package. Install with
+# `dsh plugin --profile web add link:F:/ds_global/dsh-web-ui/my-plugins/dsh-memory`.
+#
+# Row id and package name are both `dsh-memory` on purpose: the package name is
+# the browser module identity, so the client half keeps loading as
+# `dsh-memory/client.js` in the /plugins combo URL.
+- insert:
+    - id: dsh-memory
+      name: dsh-memory

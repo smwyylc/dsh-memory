@@ -1,0 +1,4 @@
+# 历史快照：本地留档用，不进仓库。仓库只带 lib/index.js 与 lib/client.js 两个产物。
+lib/*.bak-*
+package.json.orig-backup
+node_modules/
